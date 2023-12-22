@@ -1,0 +1,17 @@
+name: Periodic Workflow
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run the workflow every day at midnight (UTC)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Run Your Commands
+        run: |
+          "Periodic Workflow"
